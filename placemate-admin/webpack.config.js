@@ -44,7 +44,10 @@ module.exports = (_, argv) => ({
       name: "placemate_admin",
       filename: "remoteEntry.js",
       remotes: {},
-      exposes: {},
+      exposes: {
+        "./Header": "./src/Header",
+        "./Footer":"./src/Footer"
+      },
       shared: {
         ...deps,
         react: {
